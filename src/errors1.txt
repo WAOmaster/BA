@@ -1,0 +1,240 @@
+PS F:\Dev\ba-roadmap-app> import './index.css';
+Compiled with warnings.
+
+[eslint]
+src\components\ba-roadmap-visual.tsx
+  Line 118:6:   React Hook useEffect has a missing dependency: 'roadmapData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps      
+  Line 310:13:  'isCurrentlyExpanding' is assigned a value but never used                                                       @typescript-eslint/no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint]
+src\components\ba-roadmap-visual.tsx
+  Line 118:6:   React Hook useEffect has a missing dependency: 'roadmapData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 310:13:  'isCurrentlyExpanding' is assigned a value but never used                                                       @typescript-eslint/no-unused-vars
+
+webpack compiled with 1 warning
+ERROR in src/components/ba-roadmap-visual.tsx:35:24
+TS7031: Binding element 'title' implicitly has an 'any' type.
+    33 | };
+    34 |
+  > 35 | const RoadmapNode = ({ title, description, isExpanded, onClick, isActive, level, colorScheme, icon }) => {
+       |                        ^^^^^
+    36 |   const bgColor = isActive
+    37 |     ? `${colorScheme.secondary} ${colorScheme.border}`
+    38 |     : 'bg-gray-50 border-gray-300 hover:bg-gray-100';
+
+ERROR in src/components/ba-roadmap-visual.tsx:35:31
+TS7031: Binding element 'description' implicitly has an 'any' type.
+    33 | };
+    34 |
+  > 35 | const RoadmapNode = ({ title, description, isExpanded, onClick, isActive, level, colorScheme, icon }) => {
+       |                               ^^^^^^^^^^^
+    36 |   const bgColor = isActive
+    37 |     ? `${colorScheme.secondary} ${colorScheme.border}`
+    38 |     : 'bg-gray-50 border-gray-300 hover:bg-gray-100';
+
+ERROR in src/components/ba-roadmap-visual.tsx:35:44
+TS7031: Binding element 'isExpanded' implicitly has an 'any' type.
+    33 | };
+    34 |
+  > 35 | const RoadmapNode = ({ title, description, isExpanded, onClick, isActive, level, colorScheme, icon }) => {
+       |                                            ^^^^^^^^^^
+    36 |   const bgColor = isActive
+    37 |     ? `${colorScheme.secondary} ${colorScheme.border}`
+    38 |     : 'bg-gray-50 border-gray-300 hover:bg-gray-100';
+
+ERROR in src/components/ba-roadmap-visual.tsx:35:56
+TS7031: Binding element 'onClick' implicitly has an 'any' type.
+    33 | };
+    34 |
+  > 35 | const RoadmapNode = ({ title, description, isExpanded, onClick, isActive, level, colorScheme, icon }) => {
+       |                                                        ^^^^^^^
+    36 |   const bgColor = isActive
+    37 |     ? `${colorScheme.secondary} ${colorScheme.border}`
+    38 |     : 'bg-gray-50 border-gray-300 hover:bg-gray-100';
+
+ERROR in src/components/ba-roadmap-visual.tsx:35:65
+TS7031: Binding element 'isActive' implicitly has an 'any' type.
+    33 | };
+    34 |
+  > 35 | const RoadmapNode = ({ title, description, isExpanded, onClick, isActive, level, colorScheme, icon }) => {
+       |                                                                 ^^^^^^^^
+    36 |   const bgColor = isActive
+    37 |     ? `${colorScheme.secondary} ${colorScheme.border}`
+    38 |     : 'bg-gray-50 border-gray-300 hover:bg-gray-100';
+
+ERROR in src/components/ba-roadmap-visual.tsx:35:75
+TS7031: Binding element 'level' implicitly has an 'any' type.
+    33 | };
+    34 |
+  > 35 | const RoadmapNode = ({ title, description, isExpanded, onClick, isActive, level, colorScheme, icon }) => {
+       |                                                                           ^^^^^
+    36 |   const bgColor = isActive
+    37 |     ? `${colorScheme.secondary} ${colorScheme.border}`
+    38 |     : 'bg-gray-50 border-gray-300 hover:bg-gray-100';
+
+ERROR in src/components/ba-roadmap-visual.tsx:35:82
+TS7031: Binding element 'colorScheme' implicitly has an 'any' type.
+    33 | };
+    34 |
+  > 35 | const RoadmapNode = ({ title, description, isExpanded, onClick, isActive, level, colorScheme, icon }) => {
+       |                                                                                  ^^^^^^^^^^^
+    36 |   const bgColor = isActive
+    37 |     ? `${colorScheme.secondary} ${colorScheme.border}`
+    38 |     : 'bg-gray-50 border-gray-300 hover:bg-gray-100';
+
+ERROR in src/components/ba-roadmap-visual.tsx:35:95
+TS7031: Binding element 'icon' implicitly has an 'any' type.
+    33 | };
+    34 |
+  > 35 | const RoadmapNode = ({ title, description, isExpanded, onClick, isActive, level, colorScheme, icon }) => {
+       |                                                                                               ^^^^
+    36 |   const bgColor = isActive
+    37 |     ? `${colorScheme.secondary} ${colorScheme.border}`
+    38 |     : 'bg-gray-50 border-gray-300 hover:bg-gray-100';
+
+ERROR in src/components/ba-roadmap-visual.tsx:88:23
+TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{ foundation: { id: string; title: string; description: string; level: number; icon: Element; 
+}[]; intermediate: { id: string; title: string; description: string; level: number; icon: Element; }[]; advanced: { ...; }[]; 'ai-integration': ({ ...; } | { ...; })[]; }'.
+  No index signature with a parameter of type 'string' was found on type '{ foundation: { id: string; title: string; description: string; level: number; icon: Element; }[]; intermediate: { id: string; title: string; description: string; level: number; icon: Element; }[]; advanced: { ...; }[]; 'ai-integration': ({ ...; } | { ...; })[]; }'.
+    86 |     if (!autoExpanding) return;
+    87 |
+  > 88 |     const phaseData = roadmapData[activePhase];
+       |                       ^^^^^^^^^^^^^^^^^^^^^^^^
+    89 |
+    90 |     // If we've expanded all nodes in this phase, move to next phase after delay
+    91 |     if (currentExpandingIndex >= phaseData.length) {
+
+ERROR in src/components/ba-roadmap-visual.tsx:120:23
+TS7006: Parameter 'id' implicitly has an 'any' type.
+    118 |   }, [activePhase, currentExpandingIndex, autoExpanding]);
+    119 |
+  > 120 |   const toggleNode = (id) => {
+        |                       ^^
+    121 |     // When user manually toggles a node, disable auto-expanding
+    122 |     setAutoExpanding(false);
+    123 |
+
+ERROR in src/components/ba-roadmap-visual.tsx:126:14
+TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'.
+    124 |     setExpandedNodes(prev => ({
+    125 |       ...prev,
+  > 126 |       [id]: !prev[id]
+        |              ^^^^^^^^
+    127 |     }));
+    128 |   };
+    129 |
+
+ERROR in src/components/ba-roadmap-visual.tsx:307:24
+TS7006: Parameter 'phase' implicitly has an 'any' type.
+    305 |   };
+    306 |
+  > 307 |   const renderNodes = (phase) => {
+        |                        ^^^^^
+    308 |     const colorScheme = phaseColors[phase];
+    309 |     return roadmapData[phase].map((item, index) => {
+    310 |       const isCurrentlyExpanding = autoExpanding && currentExpandingIndex === index;
+
+ERROR in src/components/ba-roadmap-visual.tsx:308:25
+TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{ foundation: { primary: string; secondary: string; border: string; text: string; icon: string; }; intermediate: { primary: string; secondary: string; border: string; text: string; icon: string; }; advanced: { ...; }; 'ai-integration': { ...; }; }'.
+    306 |
+    307 |   const renderNodes = (phase) => {
+  > 308 |     const colorScheme = phaseColors[phase];
+        |                         ^^^^^^^^^^^^^^^^^^
+    309 |     return roadmapData[phase].map((item, index) => {
+    310 |       const isCurrentlyExpanding = autoExpanding && currentExpandingIndex === index;
+    311 |       const showSubItems = expandedNodes[item.id] && item.subItems;
+
+ERROR in src/components/ba-roadmap-visual.tsx:309:12
+TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{ foundation: { id: string; title: string; description: string; level: number; icon: Element; }[]; intermediate: { id: string; title: string; description: string; level: number; icon: Element; }[]; advanced: { ...; }[]; 'ai-integration': ({ ...; } | { ...; })[]; }'.
+    307 |   const renderNodes = (phase) => {
+    308 |     const colorScheme = phaseColors[phase];
+  > 309 |     return roadmapData[phase].map((item, index) => {
+        |            ^^^^^^^^^^^^^^^^^^
+    310 |       const isCurrentlyExpanding = autoExpanding && currentExpandingIndex === index;
+    311 |       const showSubItems = expandedNodes[item.id] && item.subItems;
+    312 |
+
+ERROR in src/components/ba-roadmap-visual.tsx:309:36
+TS7006: Parameter 'item' implicitly has an 'any' type.
+    307 |   const renderNodes = (phase) => {
+    308 |     const colorScheme = phaseColors[phase];
+  > 309 |     return roadmapData[phase].map((item, index) => {
+        |                                    ^^^^
+    310 |       const isCurrentlyExpanding = autoExpanding && currentExpandingIndex === index;
+    311 |       const showSubItems = expandedNodes[item.id] && item.subItems;
+    312 |
+
+ERROR in src/components/ba-roadmap-visual.tsx:309:42
+TS7006: Parameter 'index' implicitly has an 'any' type.
+    307 |   const renderNodes = (phase) => {
+    308 |     const colorScheme = phaseColors[phase];
+  > 309 |     return roadmapData[phase].map((item, index) => {
+        |                                          ^^^^^
+    310 |       const isCurrentlyExpanding = autoExpanding && currentExpandingIndex === index;
+    311 |       const showSubItems = expandedNodes[item.id] && item.subItems;
+    312 |
+
+ERROR in src/components/ba-roadmap-visual.tsx:311:28
+TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'.
+    309 |     return roadmapData[phase].map((item, index) => {
+    310 |       const isCurrentlyExpanding = autoExpanding && currentExpandingIndex === index;
+  > 311 |       const showSubItems = expandedNodes[item.id] && item.subItems;
+        |                            ^^^^^^^^^^^^^^^^^^^^^^
+    312 |
+    313 |       return (
+    314 |         <React.Fragment key={item.id}>
+
+ERROR in src/components/ba-roadmap-visual.tsx:318:25
+TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'.
+    316 |             title={item.title}
+    317 |             description={item.description}
+  > 318 |             isExpanded={expandedNodes[item.id]}
+        |                         ^^^^^^^^^^^^^^^^^^^^^^
+    319 |             onClick={() => toggleNode(item.id)}
+    320 |             isActive={true}
+    321 |             level={item.level}
+
+ERROR in src/components/ba-roadmap-visual.tsx:325:46
+TS7006: Parameter 'subItem' implicitly has an 'any' type.
+    323 |             icon={item.icon}
+    324 |           />
+  > 325 |           {showSubItems && item.subItems.map(subItem => (
+        |                                              ^^^^^^^
+    326 |             <RoadmapNode
+    327 |               key={subItem.id}
+    328 |               title={subItem.title}
+
+ERROR in src/components/ba-roadmap-visual.tsx:330:27
+TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'.
+    328 |               title={subItem.title}
+    329 |               description={subItem.description}
+  > 330 |               isExpanded={expandedNodes[subItem.id]}
+        |                           ^^^^^^^^^^^^^^^^^^^^^^^^^
+    331 |               onClick={() => toggleNode(subItem.id)}
+    332 |               isActive={true}
+    333 |               level={subItem.level}
+
+ERROR in src/components/ba-roadmap-visual.tsx:360:26
+TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{ foundation: { primary: string; secondary: string; border: string; text: string; icon: string; }; intermediate: { primary: string; secondary: string; border: string; text: string; icon: string; }; advanced: { ...; }; 'ai-integration': { ...; }; }'.
+  No index signature with a parameter of type 'string' was found on type '{ foundation: { primary: string; secondary: string; border: string; text: string; icon: string; }; intermediate: { primary: string; secondary: string; border: string; text: string; icon: string; }; advanced: { ...; }; 'ai-integration': { ...; }; }'.
+    358 |         ].map((phase, index) => {
+    359 |           const isActive = activePhase === phase.key;
+  > 360 |           const colors = phaseColors[phase.key];
+        |                          ^^^^^^^^^^^^^^^^^^^^^^
+    361 |           return (
+    362 |             <button
+    363 |               key={phase.key}
+
+ERROR in src/components/ba-roadmap-visual.tsx:387:48
+TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{ foundation: { primary: string; secondary: string; border: string; text: string; icon: string; }; intermediate: { primary: string; secondary: string; border: string; text: string; icon: string; }; advanced: { ...; }; 'ai-integration': { ...; }; }'.
+  No index signature with a parameter of type 'string' was found on type '{ foundation: { primary: string; secondary: string; border: string; text: string; icon: string; }; intermediate: { primary: string; secondary: string; border: string; text: string; icon: string; }; advanced: { ...; }; 'ai-integration': { ...; }; }'.
+    385 |
+    386 |       <div className={`transition-all duration-500 ${animatePhase ? 'opacity-70 transform translate-x-4' : 'opacity-100'}`}>
+  > 387 |         <div className={`p-4 mb-6 rounded-lg ${phaseColors[activePhase].primary} text-white`}>
+        |                                                ^^^^^^^^^^^^^^^^^^^^^^^^
+    388 |           <h2 className="text-xl font-bold mb-2 flex items-center">
+    389 |             {activePhase === 'foundation' && <>Foundation Skills <Award className="ml-2" size={24} /></>}
+    390 |             {activePhase === 'intermediate' && <>Intermediate Skills <Layers className="ml-2" size={24} /></>}
